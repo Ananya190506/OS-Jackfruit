@@ -256,7 +256,7 @@ In our scheduling experiment, a CPU-bound container (c_cpu: tight shell loop) an
 #### Experiment Setup: 
 Two containers were launched simultaneously:
 
-c_cpu: `"/bin/sh -c 'while true; do :; done'"` — pure CPU-bound tight loop
+c_cpu: `"/bin/sh -c 'while true; do :; done'"` — pure CPU-bound tight loop<br>
 c_io: `"/bin/sh -c 'while true; do dd if=/dev/zero of=/testfile bs=1M count=10; sleep 1; done'"` — I/O-bound with repeated disk writes and 1-second sleeps
 
 Both ran at default nice 0. top was monitored on the host for 60 seconds.
